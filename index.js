@@ -13,7 +13,7 @@ console.log("Olá, isso é um console.log");
 //b = 6;
 //c = 7;
 
-let pessoa = "Dimitri" ;
+let pessoa = "Dimitri";
 let pesso = "Dimitri"; // JS IGNORA ESPAÇOS EM BRANCOS
 
 function minhafuncao() {
@@ -50,20 +50,20 @@ ISSO É UM COMENTÁRIO
 
 // NO JS POSSUIMOS VAR LET E CONST OS MAIS USADO SÃO LET E CONST 
 
-var d,e,f;
+var d, e, f;
 
 d = 5;
 e = 6
 f = d + e;
 
-var nome , sobrenome, nomeCompleto, idade;
+var nome, sobrenome, nomeCompleto, idade;
 
 nome = "Lucas";
 sobrenome = "Pereira";
 idade = 18;
 nomeCompleto = nome + " " + sobrenome;
 
-pessoa = nome + " " + idade; 
+pessoa = nome + " " + idade;
 
 //document.getElementById("texto").innerHTML = nomeCompleto
 
@@ -143,7 +143,7 @@ var idade, eleitor;
 
 idade = 18;
 
-eleitor = (idade < 18) ? "Não Eleitor":"Sim, Eleitor"; //CONDIÇÃO + ? + SE FOR VERDADEIRO + SE FOR FALSO
+eleitor = (idade < 18) ? "Não Eleitor" : "Sim, Eleitor"; //CONDIÇÃO + ? + SE FOR VERDADEIRO + SE FOR FALSO
 
 console.log(`A resposta é: ${eleitor}. A idade dele é de ${idade} anos`)
 
@@ -153,7 +153,7 @@ var idade, eleitor, resultado;
 
 idade = 65;
 
-eleitor = (idade < 18) ? "Não Eleitor":"Sim, Eleitor"; //CONDIÇÃO + ? + SE FOR VERDADEIRO + SE FOR FALSO
+eleitor = (idade < 18) ? "Não Eleitor" : "Sim, Eleitor"; //CONDIÇÃO + ? + SE FOR VERDADEIRO + SE FOR FALSO
 
 resultado = (idade > 60 && idade < 70); // TRUE OR FALSE "E"
 resultado = (idade > 60 || idade < 70); // TRUE OR FALSE "OU"
@@ -172,7 +172,7 @@ function soma(valor1, valor2) {
 
 // FUNÇÃO DE COTAÇÃO DE DOLAR
 
-function realParaDolar(real , cotacaoDolar) {
+function realParaDolar(real, cotacaoDolar) {
     return real * cotacaoDolar
 }
 
@@ -181,7 +181,7 @@ var cotacao = 6;
 
 var totali = realParaDolar(dinheiroMeu, cotacao);
 
-var total = soma(5,5);
+var total = soma(5, 5);
 
 console.log(total);
 
@@ -198,12 +198,36 @@ alertaHello();
 // FUNÇÃO CONVERTE GRAUS
 
 function paraCelsius(valorFahrenheit) {
-    return (5/9) * (valorFahrenheit - 32);
+    return (5 / 9) * (valorFahrenheit - 32);
 }
 
 var y = paraCelsius(77);
 
 console.log(`A temperatura é de ${y} graus celsius`);
+
+// OBJETOS 
+
+// SÃO VARIAVEIS COM VÁRIOS VALORES DENTRO CHAMADOS DE PROPRIEDADES
+
+// OBJETOS TBM PODEM TER MÉTODOS
+
+const carro = {
+    marca: "ford",
+    modelo: "ka",
+    ano: 2015,
+    placa: "ABC-1234",
+    buzina: function () { console.log("BIIIIIIII") },
+    completo: function () {
+        return `O ano do carro é: ${this.ano}, e o modelo é: ${this.modelo}!`;
+    }
+};
+
+console.log(carro.marca);
+
+carro.buzina();
+
+console.log(carro.completo()); // Isso sim vai mostrar o texto no console
+
 
 
 
