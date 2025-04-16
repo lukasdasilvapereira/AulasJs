@@ -161,4 +161,49 @@ resultado = !(idade === 60); // TRUE OR FALSE "NÃO"
 
 console.log(resultado);
 
+// FUNÇÕES
+
+// FUNÇÃO É UM BLOCO DE CÓDIGO PRA RESOLVER UM PROBLEMA, ELAS SÃO CHAMADAS AO SER INVOCADAS
+
+// FUNÇÃO DE SOMA
+function soma(valor1, valor2) {
+    return valor1 + valor2;
+}
+
+// FUNÇÃO DE COTAÇÃO DE DOLAR
+
+function realParaDolar(real , cotacaoDolar) {
+    return real * cotacaoDolar
+}
+
+var dinheiroMeu = 20;
+var cotacao = 6;
+
+var totali = realParaDolar(dinheiroMeu, cotacao);
+
+var total = soma(5,5);
+
+console.log(total);
+
+console.log(`O valor em real é ${dinheiroMeu}, o valor em dólar é: U$ é ${totali}`);
+
+//FUNÇÃO PARA ONCLICK
+
+function alertaHello() {
+    console.log("E, aí!");
+}
+
+alertaHello();
+
+// FUNÇÃO CONVERTE GRAUS
+
+function paraCelsius(valorFahrenheit) {
+    return (5/9) * (valorFahrenheit - 32);
+}
+
+var y = paraCelsius(77);
+
+console.log(`A temperatura é de ${y} graus celsius`);
+
+
 
