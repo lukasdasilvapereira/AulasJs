@@ -10,10 +10,16 @@
         }
     </style>
 </head>
-<body>
+<body onmousedown="clicou()" onmouseup="pressiona()" onload="carregar()" onresize="redimento()">
     <h1>Aprendendo JavaScript</h1>
     <p id="texto"></p>
     <button onclick="alertaHello()">Clique aqui</button>
+    <button ondblclick="alerta()">Clique aqui</button>
+    <div id="teste" onmouseover="viraVermelho()" onmouseout="viraAzul()" onmousemove="adiciona()"  style= "margin: auto; width: 80%; height: 200px; background-color: blue;">
+
+    </div>
+
+    <input type="text" id="campoTexto" placeholder="Digite alguma coisa" id="campoTexto" style="height: 200px; width: 400px; margin: 30px;"  onfocus="campoFocado()" value="Ja vem com texto" onchange="mudou()" onblur="alertaHello()"  onkeypress="pressionada()">
     <p>
         <script>
             document.write('Oi <u>escrito com document.write</u>')

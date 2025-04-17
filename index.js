@@ -187,14 +187,6 @@ console.log(total);
 
 console.log(`O valor em real é ${dinheiroMeu}, o valor em dólar é: U$ é ${totali}`);
 
-//FUNÇÃO PARA ONCLICK
-
-function alertaHello() {
-    console.log("E, aí!");
-}
-
-alertaHello();
-
 // FUNÇÃO CONVERTE GRAUS
 
 function paraCelsius(valorFahrenheit) {
@@ -227,6 +219,77 @@ console.log(carro.marca);
 carro.buzina();
 
 console.log(carro.completo()); // Isso sim vai mostrar o texto no console
+
+/* EVENTOS
+ EVENTOS SÃO DISPARADOS DE ACORDO COM A INTERAÇÃO DO USUÁRIO NA PÁGINA
+
+ ONCLICK > DISPARADO QUANDO RECEBE CLICK
+ ONDBLCLICK > DISPARADO QUANDO CLIQUE DUPLO
+ ONMOUSEOVER > DISPARADO QUANDO O MOUSE ESTÁ SOBRE
+ ONMOUSEOUT > DISPARADO QUANDO O MOUSE É MOVIDO PRA FORA
+ ONFOCUS > DISPARADO QUANDO O ELEMENTO RECEBE FOCO
+ ONCHANGE > DISPARADO QUANDO EXISTE UMA MUDANÇA NO CONTEÚDO
+ ONBLUR > DISPARADO QUANDO O ELEMENTO PERDE O FOCO
+ ONKEYDOWN > DISPARADO QUANDO UMA TECLA É PRESSIONADA
+ ONKEYPRESS > DISPARADO QUANDO UMA TECLA É PRESSIONADA E SOLTA
+ ONKEYUP > DISPARADO QUANDO UMA TECLA É SOLTA SOBRE O ELEMENTO
+ ONLOAD > DISPARADO QUANDO UMA PÁGINA TERMINOU DE SER CARREGADA
+ ONRESIZE > DISPARADA QUANDO HÁ UM REDIRECIONAMENTO DA JANELA
+
+ */
+
+ function alertaHello() {
+    console.log("E, aí!");
+    document.body.style.backgroundColor = "Yellow";
+}
+
+function alertHe() {
+    console.log("Oiiii");
+}
+
+function viraVermelho() {
+    let div = document.getElementById("teste");
+    div.style.backgroundColor = "Red";
+}
+
+function viraAzul() {
+    let div = document.getElementById("teste");
+    div.style.backgroundColor = "blue";
+}
+
+//function adiciona() {
+   // let p = document.getElementById("texto")
+  //  p.append("O mouse moveu<br>")
+//}
+
+//function clicou() {
+   // alert("clicou na tela")
+//}
+
+//function pressiona() {
+    //alert("pressionou")
+//}
+
+function campoFocado() {
+    document.getElementById("campoTexto").value = "";
+}
+
+function mudou() {
+    console.log("Mudou")
+}
+
+function pressionada() {
+    let input = document.getElementById("campoTexto").value;
+    console.log(input)
+}
+
+function carregar() {
+    alert("terminou de carregar");
+}
+
+function redimento() {
+    console.log("Houve um redimensionamento")
+}
 
 
 
