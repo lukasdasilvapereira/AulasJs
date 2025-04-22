@@ -14,7 +14,7 @@ lista[0] = "café";
 console.log(lista);
 
 const pessoa = ["Dimitri", "Teixeira", 30, "Professor"];// Array
-const person = {nome: "Lucas", sobrenome: "Pereira", idade: 18}; //Objeto
+const person = { nome: "Lucas", sobrenome: "Pereira", idade: 18 }; //Objeto
 
 console.log(pessoa.length);
 console.log(pessoa[pessoa.length - 1]); // VAI MOSTRAR O ULTIMO
@@ -62,7 +62,7 @@ console.log(superLista);
 // MÉTODO SLICE
 
 const jogadores = ["Biro Biro", "Ribamar", "Pelé", "Maradona"];
-const craques = jogadores.slice(2,6) //PEGOU DA POSIÇÃO 2 PRA FRENTE
+const craques = jogadores.slice(2, 6) //PEGOU DA POSIÇÃO 2 PRA FRENTE
 
 // MÉTODO SORT
 
@@ -75,7 +75,7 @@ jogadores.reverse(); // VAI DEIXAR DE TRÁS PRA FRENTE
 
 // NÚMEROS EM ARRAY
 
-const numeros = [40, 100, 1 , 5, 25 , 10];
+const numeros = [40, 100, 1, 5, 25, 10];
 
 function MaiorNumero(array) {
     return Math.max.apply(null, array); // VAI BUSCAR O MAIOR NÚMERO
@@ -90,7 +90,7 @@ function MenorNumero(array) {
 
 const maior20 = numeros.filter(filtragem);
 
-function filtragem(value, index , array) {
+function filtragem(value, index, array) {
     return value > 20;
 }
 
@@ -100,7 +100,7 @@ console.log(maior20);
 
 var interruptor = "on";
 
-if(interruptor == "on") {
+if (interruptor == "on") {
     console.log("A lampada está ligada");
 } else {
     console.log("A lampada está desligada");
@@ -108,7 +108,7 @@ if(interruptor == "on") {
 
 var hora = new Date().getHours();
 
-if(hora < 12) {
+if (hora < 12) {
     console.log("Bom dia");
 } else if (hora < 18) {
     console.log("Boa tarde");
@@ -119,7 +119,7 @@ if(hora < 12) {
 function verificar() {
     let nome = document.getElementById("nome").value;
     let p = document.getElementById("teste");
-    if(nome == "" || nome == null) {
+    if (nome == "" || nome == null) {
         p.innerHTML = "Digite um nome";
         p.style.color = "red"
     } else {
@@ -128,5 +128,36 @@ function verificar() {
     }
 }
 
+// SWITCH
+
+function verificarCor() {
+    let cor = document.getElementById("cor").value;
+    cor = cor.toLowerCase();
+
+    switch (cor) {
+        case "azul":
+            document.body.style.backgroundColor = "blue";
+            break;
+
+        case "vermelho":
+            document.body.style.backgroundColor = "red";
+            break;
+
+        case "amarelo":
+            document.body.style.backgroundColor = "yellow";
+            break;
+
+        case "verde":
+            document.body.style.backgroundColor = "green";
+            break;
+
+        case "preto":
+            document.body.style.backgroundColor = "black";
+            break;
+
+        default:
+            document.getElementById("teste2").innerHTML = `Nenhuma cor disponível com o nome de ${cor}`
+    }
+}
 
 
