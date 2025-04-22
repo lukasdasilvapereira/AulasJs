@@ -96,3 +96,37 @@ function filtragem(value, index , array) {
 
 console.log(maior20);
 
+// IF E ELSE
+
+var interruptor = "on";
+
+if(interruptor == "on") {
+    console.log("A lampada está ligada");
+} else {
+    console.log("A lampada está desligada");
+}
+
+var hora = new Date().getHours();
+
+if(hora < 12) {
+    console.log("Bom dia");
+} else if (hora < 18) {
+    console.log("Boa tarde");
+} else {
+    console.log("Boa noite")
+}
+
+function verificar() {
+    let nome = document.getElementById("nome").value;
+    let p = document.getElementById("teste");
+    if(nome == "" || nome == null) {
+        p.innerHTML = "Digite um nome";
+        p.style.color = "red"
+    } else {
+        p.innerHTML = `Parabéns ${nome}`;
+        p.style.color = "green"
+    }
+}
+
+
+
