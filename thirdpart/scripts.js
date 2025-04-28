@@ -47,3 +47,71 @@ console.log(uno)
 console.log(gol)
 console.log(gol.buzina())
 console.log(uno.buzina())
+
+// MANIPULAÇÃO DE DATAS
+
+let data = new Date();
+console.log(data);
+
+// ANO
+
+let ano = data.getFullYear();
+
+console.log(ano);
+
+// MÊS
+
+let mes = data.getMonth();
+
+console.log(mes);
+
+
+// DIA 1 - 31
+
+let diaMes = data.getDate();
+console.log(diaMes);
+
+// DIA DA SEMANA
+
+let diaSemana = data.getDay();
+
+console.log(diaSemana);
+
+// HORA
+
+let hora = data.getHours();
+
+console.log(hora);
+
+// MINUTOS
+
+let minutos = data.getMinutes();
+console.log(minutos)
+
+// SEGUNDOS
+
+let segundos = data.getSeconds();
+console.log(segundos);
+
+// MILISEGUNDOS
+
+let milisegundos = data.getMilliseconds();
+
+console.log(milisegundos);
+
+// DATA PADRAO BRASILEIRO
+
+let dataBr = data.toLocaleString('pt-br');
+
+console.log(dataBr);
+
+// COMPARAR DATAS EX: vencimentos
+
+var hoje = new Date();
+var vencimento = new Date(2022, 0 , 15);
+
+if(hoje > vencimento) {
+   console.log("Sua conta está vencida");
+} else {
+   console.log("Ainda dá tempo , tudo certo!")
+}
