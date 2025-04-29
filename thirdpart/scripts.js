@@ -115,3 +115,38 @@ if(hoje > vencimento) {
 } else {
    console.log("Ainda dá tempo , tudo certo!")
 }
+
+
+// JSON = CONVERTE OBJETOS EM TEXTOS E VICE VERSA
+
+//CONVERTENDO OBJETO EM TEXTO
+
+const year = {
+   dia: 25,
+   mes: "Abril",
+   seculo: 21
+}
+
+let texto = JSON.stringify(year);
+
+
+//CONVERTENDO PARA OBJETO
+let objs = JSON.parse(texto);
+
+function buscarCEP() {
+   let input = document.getElementById("cep").value;
+
+   const ajax = new XMLHttpRequest();
+   ajax.open('GET', "https://viacep.com.br/ws/" + input + "/json/")
+   ajax.send();
+
+   ajax.onload = function () {
+      document.getElementById("texto").innerHTML = this.responseText;
+      let obj = JSON.parse(this.responseText);
+      let logradouro = obj.logradouro;
+      let cidade = obj.localidade;
+      let estado = obj.uf;
+   }
+}
+
+
