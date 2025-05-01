@@ -56,6 +56,7 @@ input {
     height: 80px;
     width: 60%;
     box-shadow: 0 0 20px #ccc;
+    margin-bottom: 30px;
 }
 
 .item-icone {
@@ -81,4 +82,17 @@ input {
     padding: 10px;
     height: 80px;
     width: 100%;
+}
+
+.fa-circle-check {
+    color: green;
+}
+
+.item.clicado {
+    background: #d4f6d9;
+}
+
+.item.clicado .item-nome {
+    text-decoration: line-through;
+    color: gray;
 }
